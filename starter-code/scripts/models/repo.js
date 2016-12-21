@@ -10,10 +10,10 @@
     /* TODO: DONE: How would you like to fetch your repos? Someone say AJAX?!
       Do not forget to call the callback! */
     $.ajax({
-      url: 'https://api.github.com/user/repo?type=owner',
+      url: 'https://api.github.com/user/repos?type=owner',
       method: 'GET',
       headers: {
-        Authorization: 'token ${githubToken}'
+        Authorization: `token ${githubToken}`
       }
     })
       .then(callback);
