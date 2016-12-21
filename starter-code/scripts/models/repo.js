@@ -13,10 +13,13 @@
       url: 'https://api.github.com/user/repos?type=owner',
       method: 'GET',
       headers: {
-        Authorization: `token ${githubToken}`
+        'Authorization':'token ' + githubToken},
+      success: function(data) {
+        // console.log(data);
+        reposObj.allRepos = data;
+        callback();
       }
-    })
-      .then(callback);
+    });
   };
 
   reposObj.withTheAttribute = function(myAttr) {
