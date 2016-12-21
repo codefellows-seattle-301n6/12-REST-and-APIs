@@ -9,7 +9,7 @@
 
   repoView.renderRepos = function() {
     $('#about ul').empty().append(
-      reposObj.withTheAttribute('name')  // TODO: experiment changing this attribute!
+      reposObj.withTheAttribute('description')  // TODO: experiment changing this attribute!
       .map(repoCompiler)
     );
   };
