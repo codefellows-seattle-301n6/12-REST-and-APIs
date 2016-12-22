@@ -40,7 +40,7 @@
         <p>Description: {{description}}</p>
         <p>Language: {{language}}</p>
         <p>Created: {{formatDate created_at}}</p>
-        <p>Last updated: {{updated_at}}</p>
+        <p>Last updated: {{formatDate updated_at}}</p>
         {{#if watchers_count}}
          <p>{{watchers_count}} watching this repo</p>
         {{/if}}
@@ -114,12 +114,12 @@
     </footer>
     <!-- Vendor files: -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/vendor/scripts/moment.js"></script>
     <script src="/vendor/scripts/handlebars.js"></script>
     <script src="/vendor/scripts/marked.js"></script>
     <script src="/vendor/scripts/html5sql.js"></script>
     <script src="/vendor/scripts/webdb.js"></script>
     <script src="/vendor/scripts/page.js"></script>
-
     <!-- TODO: Include your secret GitHub token file, which should be gitingore'd,
       therefore recreated in every developer's environment. -->
     <script src="/scripts/models/githubToken.js"></script>

@@ -5,9 +5,9 @@
   /* TODO: Let's compile our new template!
        Save the result of invoking Handlebars in this 'repoCompiler' variable
        that we will pass to the append method below. */
-  var moment = require('moment');
-  Handlebars.registerHelper('formatDate', function(date) {
-    return moment(Date(date).format('MMMM do YYYY'));
+  Handlebars.registerHelper('formatDate', function(dateToBeFormatted) {
+    console.log(dateToBeFormatted);
+    return moment(dateToBeFormatted).format('MMMM DD, YYYY');
   });
 
   var repoCompiler = Handlebars.compile($('#repo-template').html()); // Finish the Handlebars method here!
