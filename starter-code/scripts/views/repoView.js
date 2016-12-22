@@ -6,7 +6,6 @@
        Save the result of invoking Handlebars in this 'repoCompiler' variable
        that we will pass to the append method below. */
   Handlebars.registerHelper('formatDate', function(dateToBeFormatted) {
-    console.log(dateToBeFormatted);
     return moment(dateToBeFormatted).format('MMMM DD, YYYY');
   });
 
